@@ -45,7 +45,6 @@ while ret:
 cap.release()
 
 # Save the detections along with frame numbers to a text file
-# Construct the absolute path to the output directory and file
 output_dir = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'output_files'))
 output_filename = 'detection_file.txt'
 output_file_path = os.path.join(output_dir, output_filename)

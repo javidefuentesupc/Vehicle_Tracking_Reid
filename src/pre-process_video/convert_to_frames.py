@@ -24,9 +24,6 @@ def save_frames_from_video(video_path, output_folder):
         frame_count += 1
     cap.release()
 
-# video_path = 
 output_folder = processed_frames_path
 
-# save_frames_from_video(video_path, output_folder)
 save_frames_from_video(full_data_path,output_folder)
-# print(processed_frames_path)

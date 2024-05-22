@@ -14,6 +14,18 @@ The steps to carry out the project, as shown in the pipeline, are:
 ## Data
 The videos for tracking are available in the [UPC database](#).
 
+## Requirements
+Run 
+```sh
+   pip install -r requirements.txt
+```
+## CPU & GPU
+The scripts that require GPU are:
+`detector.py`, `feature_extractor.py`, `detector.py`, `detector.py`
+Run 
+```sh
+   pip install -r requirements.txt
+```
 ## Preprocessing Video
 To run the subsequent algorithms, video frames must be saved in a folder. In the `preprocess_video` directory, there are two scripts for this purpose:
 - **Sequential Conversion**: Converts video frames sequentially.
@@ -24,11 +36,14 @@ The frames are saved in the `processed_frames` directory.
 ## Step 1: Vehicle Detection
 This step generates a detection file with the following information for each detected vehicle:
 
- frame_number, class_id, bb_left, bb_top, bb_width, bb_height, 1, -1.0, -1.0, -1.0
+ `frame_number, class_id, bb_left, bb_top, bb_width, bb_height, 1, -1.0, -1.0, -1.0`
 
 
 ## Step 2: Feature Extraction
 This step extracts features from the videos and outputs them as a `.npy` file.
+```sh
+   python feature_extractor.py
+```
 
 ## Step 3: Vehicle Tracking with StrongSORT
 This step uses the StrongSORT repository for vehicle tracking. To run it:
@@ -38,6 +53,7 @@ This step uses the StrongSORT repository for vehicle tracking. To run it:
    ```sh
    python strong_sort.py MOT17 test
  and select the features you want to use (see opts.py).
+and select the features you want to use (see opts.py).
 and select the features you want to use (see opts.py). The tracking file will be saved in the results directory.
 
 ## Step 4: Automatic License Plate Recognition (ALPR)
