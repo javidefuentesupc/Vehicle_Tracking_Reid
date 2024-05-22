@@ -21,7 +21,7 @@ Run
 ```
 ## CPU & GPU
 The scripts that require GPU are:
-`detector.py`, `feature_extractor.py`, `detector.py`, `detector.py`
+`detector.py`, `feature_extractor.py` and `strong_sort.py`
 Run 
 ```sh
    pip install -r requirements.txt
