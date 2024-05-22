@@ -37,7 +37,9 @@ The frames are saved in the `processed_frames` directory.
 This step generates a detection file with the following information for each detected vehicle:
 
  `frame_number, class_id, bb_left, bb_top, bb_width, bb_height, 1, -1.0, -1.0, -1.0`
-
+```sh
+   python detector.py
+```
 
 ## Step 2: Feature Extraction
 This step extracts features from the videos and outputs them as a `.npy` file.
@@ -52,9 +54,9 @@ This step uses the StrongSORT repository for vehicle tracking. To run it:
 3. Run the following command:
    ```sh
    python strong_sort.py MOT17 test
- and select the features you want to use (see opts.py).
-and select the features you want to use (see opts.py).
-and select the features you want to use (see opts.py). The tracking file will be saved in the results directory.
+and select the features you want to use (see opts.py). The tracking file will be saved in the results directory and will have the following info:
+ `frame_number, vehicle_id, bb_left, bb_top, bb_width, bb_height, 1, -1.0, -1.0, -1.0`
+
 
 ## Step 4: Automatic License Plate Recognition (ALPR)
 1. Download the OpenALPR software from the OpenALPR releases page.
