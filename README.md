@@ -59,10 +59,16 @@ and select the features you want to use (see opts.py). The tracking file will be
 
 
 ## Step 4: Automatic License Plate Recognition (ALPR)
-1. Download the OpenALPR software from the OpenALPR releases page.
+1. Download the OpenALPR software from the [OpenALPR releases page](https://github.com/openalpr/openalpr/releases).
 2. Run the license_plate_recognition.py script, specifying the required paths.
-3. This will output the tracking file with the license plates of the vehicles.
-
+```sh
+python license_plate_recognition.py
+```
+4. This will output the tracking file with the license plates of the vehicles.
+4-Run the post-processing script of the license plates
+```sh
+python post-process_ALPR.py
+```
 # 5- View results.
 To generate a video with the tracking information, run the following command:
 ```sh
